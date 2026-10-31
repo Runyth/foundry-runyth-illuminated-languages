@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.10 — 2026-11-01
+
+- Declared the `AGPL-3.0-or-later` licence and the tested Node `>=22.13.0 <27` range in the lockfile root package.
+- Preserved all behaviour, dependency, and migration contracts; this patch changes packaging metadata only and requires no content migration.
+
+## 1.0.9 — 2026-10-31
+
+- Licensed the program under AGPL-3.0-or-later.
+- Aligned the unpublished module id with `runyth-illuminated-languages`.
+- Published install, source, and documentation archives as `-mod`, `-src`, and `-doc`.
+
 ## 1.0.8 — 2026-08-08
 
 - Removed the hard `maximum: 2.8.3` Polyglot dependency constraint that caused Foundry to refuse activation after a compatible custom Polyglot patch update.

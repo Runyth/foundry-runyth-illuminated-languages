@@ -3,7 +3,7 @@
 Result: **Passed**
 
 Installable file entries: 42
-Source file entries: 107
+Source file entries: 106
 
 - Exactly one installable root: passed
 - `module.json` at module root: passed

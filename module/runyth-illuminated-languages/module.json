@@ -2,7 +2,7 @@
   "id": "runyth-illuminated-languages",
   "title": "Runyth Illuminated Languages",
   "description": "Viewer-specific written-language rendering for Foundry journals and Illuminated Documents, powered by Polyglot.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "authors": [
     {
       "name": "Runyth",
@@ -56,7 +56,7 @@
   "license": "LICENSE",
   "readme": "README.md",
   "manifest": "https://github.com/Runyth/foundry-runyth-illuminated-languages/releases/latest/download/module.json",
-  "download": "https://github.com/Runyth/foundry-runyth-illuminated-languages/releases/download/v1.0.9/runyth-illuminated-languages-v1.0.9-mod.zip",
+  "download": "https://github.com/Runyth/foundry-runyth-illuminated-languages/releases/download/v1.0.10/runyth-illuminated-languages-v1.0.10-mod.zip",
   "url": "https://github.com/Runyth/foundry-runyth-illuminated-languages",
   "changelog": "CHANGELOG.md"
 }

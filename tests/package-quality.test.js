@@ -31,7 +31,7 @@ function flatten(value, prefix = "", output = new Set()) {
 test("manifest identifies release and dependencies", async () => {
   const manifest = JSON.parse(await readFile(path.join(moduleRoot, "module.json"), "utf8"));
   assert.equal(manifest.id, "runyth-illuminated-languages");
-  assert.equal(manifest.version, "1.0.9");
+  assert.equal(manifest.version, "1.0.10");
   assert.equal(manifest.compatibility.minimum, "13");
   assert.equal(manifest.compatibility.maximum, "13");
   assert.equal(manifest.relationships.requires[0].id, "polyglot");

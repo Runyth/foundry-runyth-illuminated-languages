@@ -1,6 +1,6 @@
 # Complete generated file list
 
-Source repository files: 107
+Source repository files: 106
 Installable module files: 42
 
 ## Installable module
@@ -51,7 +51,6 @@ Installable module files: 42
 ## Source repository
 
 - .editorconfig
-- .github/workflows/ci.yml
 - .github/workflows/quality.yml
 - .github/workflows/release.yml
 - .gitignore
