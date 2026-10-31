@@ -1,0 +1,86 @@
+<div class="runyth-illuminated-languages-settings">
+  <section>
+    <h2>{{localize "ILLUMINATED_LANGUAGES.Sections.Integration"}}</h2>
+    <dl class="status-grid">
+      {{#each integrationRows}}
+        <dt>{{localize label}}</dt><dd>{{value}}</dd>
+      {{/each}}
+    </dl>
+  </section>
+
+  {{#if isGM}}
+  <section>
+    <h2>{{localize "ILLUMINATED_LANGUAGES.Sections.Defaults"}}</h2>
+    <h3>{{localize "ILLUMINATED_LANGUAGES.Sections.DocumentCreation"}}</h3>
+    <p class="hint">{{localize "ILLUMINATED_LANGUAGES.Settings.DocumentCreationHint"}}</p>
+    <div class="form-group">
+      <label for="runyth-illuminated-languages-default-language">{{localize "ILLUMINATED_LANGUAGES.Fields.DocumentLanguage"}}</label>
+      <select id="runyth-illuminated-languages-default-language" name="defaultLanguage">{{selectOptions languages selected=values.defaultLanguage valueAttr="id" labelAttr="label"}}</select>
+    </div>
+    <div class="form-group">
+      <label for="runyth-illuminated-languages-label-mode">{{localize "ILLUMINATED_LANGUAGES.Settings.LanguageLabelMode"}}</label>
+      <select id="runyth-illuminated-languages-label-mode" name="languageLabelMode" aria-describedby="runyth-illuminated-languages-label-mode-hint">{{selectOptions languageLabelOptions selected=values.languageLabelMode valueAttr="id" labelAttr="label"}}</select>
+      <p id="runyth-illuminated-languages-label-mode-hint" class="hint">{{localize "ILLUMINATED_LANGUAGES.Settings.LanguageLabelModeHint"}}</p>
+    </div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-require-literacy">{{localize "ILLUMINATED_LANGUAGES.Fields.RequireLiteracy"}}</label><input id="runyth-illuminated-languages-require-literacy" type="checkbox" name="requireLiteracy" {{checked values.requireLiteracy}}></div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-spoken-literate">{{localize "ILLUMINATED_LANGUAGES.Settings.SpokenAsLiterate"}}</label><input id="runyth-illuminated-languages-spoken-literate" type="checkbox" name="spokenAsLiterate" {{checked values.spokenAsLiterate}}></div>
+    <div class="form-group">
+      <label for="runyth-illuminated-languages-name-visibility">{{localize "ILLUMINATED_LANGUAGES.Fields.NameVisibility"}}</label>
+      <select id="runyth-illuminated-languages-name-visibility" name="languageNameVisibility" aria-describedby="runyth-illuminated-languages-name-visibility-hint">{{selectOptions visibilityOptions selected=values.languageNameVisibility valueAttr="id" labelAttr="label"}}</select>
+      <p id="runyth-illuminated-languages-name-visibility-hint" class="hint">{{localize "ILLUMINATED_LANGUAGES.Settings.NameVisibilityDefaultHint"}}</p>
+    </div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-gm-original">{{localize "ILLUMINATED_LANGUAGES.Settings.GmOriginalView"}}</label><input id="runyth-illuminated-languages-gm-original" type="checkbox" name="gmOriginalView" {{checked values.gmOriginalView}}></div>
+    <div class="form-group">
+      <label for="runyth-illuminated-languages-fallback">{{localize "ILLUMINATED_LANGUAGES.Fields.UnreadableFallback"}}</label>
+      <select id="runyth-illuminated-languages-fallback" name="unreadableFallback">{{selectOptions fallbackOptions selected=values.unreadableFallback valueAttr="id" labelAttr="label"}}</select>
+    </div>
+    <div class="form-group">
+      <label for="runyth-illuminated-languages-no-actor">{{localize "ILLUMINATED_LANGUAGES.Settings.NoActorBehaviour"}}</label>
+      <select id="runyth-illuminated-languages-no-actor" name="noActorBehaviour">
+        <option value="unreadable" {{#if (eq values.noActorBehaviour "unreadable")}}selected{{/if}}>{{localize "ILLUMINATED_LANGUAGES.Settings.NoActorSilent"}}</option>
+        <option value="unreadable-warning" {{#if (eq values.noActorBehaviour "unreadable-warning")}}selected{{/if}}>{{localize "ILLUMINATED_LANGUAGES.Settings.NoActorWarning"}}</option>
+      </select>
+    </div>
+  </section>
+  {{/if}}
+
+  <section>
+    <h2>{{localize "ILLUMINATED_LANGUAGES.Sections.ReadingActor"}}</h2>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-use-explicit">{{localize "ILLUMINATED_LANGUAGES.Settings.UseExplicit"}}</label><input id="runyth-illuminated-languages-use-explicit" type="checkbox" name="useExplicitReadAs" {{checked values.useExplicitReadAs}}></div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-use-controlled">{{localize "ILLUMINATED_LANGUAGES.Settings.UseControlled"}}</label><input id="runyth-illuminated-languages-use-controlled" type="checkbox" name="useControlledToken" {{checked values.useControlledToken}}></div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-use-assigned">{{localize "ILLUMINATED_LANGUAGES.Settings.UseAssigned"}}</label><input id="runyth-illuminated-languages-use-assigned" type="checkbox" name="useAssignedCharacter" {{checked values.useAssignedCharacter}}></div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-use-owned">{{localize "ILLUMINATED_LANGUAGES.Settings.UseOwned"}}</label><input id="runyth-illuminated-languages-use-owned" type="checkbox" name="useSingleOwnedCharacter" {{checked values.useSingleOwnedCharacter}}></div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-remember">{{localize "ILLUMINATED_LANGUAGES.Settings.RememberSelection"}}</label><input id="runyth-illuminated-languages-remember" type="checkbox" name="rememberReadAs" {{checked values.rememberReadAs}}></div>
+    <div class="form-group"><label for="runyth-illuminated-languages-multiple-controlled">{{localize "ILLUMINATED_LANGUAGES.Settings.MultipleControlled"}}</label><select id="runyth-illuminated-languages-multiple-controlled" name="multipleControlledBehaviour"><option value="require-explicit" selected>{{localize "ILLUMINATED_LANGUAGES.Settings.RequireExplicit"}}</option></select></div>
+  </section>
+
+  <section>
+    <h2>{{localize "ILLUMINATED_LANGUAGES.Sections.Appearance"}}</h2>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-use-fonts">{{localize "ILLUMINATED_LANGUAGES.Settings.UseFonts"}}</label><input id="runyth-illuminated-languages-use-fonts" type="checkbox" name="usePolyglotFonts" {{checked values.usePolyglotFonts}}></div>
+    <div class="form-group"><label for="runyth-illuminated-languages-scale">{{localize "ILLUMINATED_LANGUAGES.Settings.ScriptScale"}}</label><input id="runyth-illuminated-languages-scale" type="number" name="scriptScale" min="0.75" max="1.75" step="0.05" value="{{values.scriptScale}}"></div>
+    <div class="form-group"><label for="runyth-illuminated-languages-line-height">{{localize "ILLUMINATED_LANGUAGES.Settings.LineHeight"}}</label><input id="runyth-illuminated-languages-line-height" type="number" name="lineHeight" min="1" max="2" step="0.05" value="{{values.lineHeight}}"></div>
+    <div class="form-group checkbox-group"><label for="runyth-illuminated-languages-show-badge">{{localize "ILLUMINATED_LANGUAGES.Settings.ShowBadge"}}</label><input id="runyth-illuminated-languages-show-badge" type="checkbox" name="showLanguageBadge" {{checked values.showLanguageBadge}}></div>
+  </section>
+
+  {{#if isGM}}
+  <section>
+    <h2>{{localize "ILLUMINATED_LANGUAGES.Sections.Maintenance"}}</h2>
+    <div class="button-grid">
+      <button type="button" data-action="validate">{{localize "ILLUMINATED_LANGUAGES.Actions.Validate"}}</button>
+      <button type="button" data-action="migrate">{{localize "ILLUMINATED_LANGUAGES.Actions.Migrate"}}</button>
+      <button type="button" data-action="clearCaches">{{localize "ILLUMINATED_LANGUAGES.Actions.ClearCaches"}}</button>
+      <button type="button" data-action="rerender">{{localize "ILLUMINATED_LANGUAGES.Actions.Rerender"}}</button>
+      <button type="button" data-action="diagnostics">{{localize "ILLUMINATED_LANGUAGES.Actions.CopyDiagnostics"}}</button>
+      <button type="button" data-action="selfTest">{{localize "ILLUMINATED_LANGUAGES.Actions.SelfTest"}}</button>
+      <button type="button" data-action="bulk">{{localize "ILLUMINATED_LANGUAGES.Actions.BulkManager"}}</button>
+      <button type="button" data-action="resetGeometry">{{localize "ILLUMINATED_LANGUAGES.Actions.ResetWindowGeometry"}}</button>
+    </div>
+    <p class="hint">{{localize "ILLUMINATED_LANGUAGES.Settings.ResetGeometryHint"}}</p>
+    {{#if lastResult}}<pre class="result" aria-live="polite">{{json lastResult}}</pre>{{/if}}
+  </section>
+  {{/if}}
+
+  <footer class="form-footer">
+    <button type="submit"><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> {{localize "ILLUMINATED_LANGUAGES.Actions.Save"}}</button>
+  </footer>
+</div>

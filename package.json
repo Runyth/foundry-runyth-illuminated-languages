@@ -1,0 +1,25 @@
+{
+  "name": "runyth-illuminated-languages",
+  "version": "1.0.9",
+  "private": true,
+  "type": "module",
+  "description": "Source repository for the Runyth Illuminated Languages Foundry VTT module.",
+  "engines": {
+    "node": ">=22.13.0 <27"
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=spec tests/*.test.js",
+    "lint": "node tools/audit.mjs",
+    "format:check": "node tools/format-check.mjs",
+    "typecheck": "node tools/typecheck.mjs",
+    "audit": "node tools/audit.mjs",
+    "validate": "node tools/validate.mjs",
+    "build": "node tools/build.mjs",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Runyth/foundry-runyth-illuminated-languages.git"
+  },
+  "license": "AGPL-3.0-or-later"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "runyth-illuminated-languages-example-provider",
+  "title": "Illuminated Languages Example Provider",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "runyth-illuminated-languages",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.0.0"
+        }
+      }
+    ]
+  }
+}

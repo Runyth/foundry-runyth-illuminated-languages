@@ -1,0 +1,196 @@
+{
+  "ILLUMINATED_LANGUAGES": {
+    "Actions": {
+      "ApplySelected": "Auf ausgewählte Seiten anwenden",
+      "BulkManager": "Massenverwaltung öffnen",
+      "ClearCaches": "Temporäre Zwischenspeicher leeren",
+      "CopyDiagnostics": "Diagnosebericht kopieren",
+      "Migrate": "Metadaten migrieren",
+      "Refresh": "Aktualisieren",
+      "Rerender": "Geöffnete Dokumente neu darstellen",
+      "Save": "Speichern",
+      "SelfTest": "Integrations-Selbsttest ausführen",
+      "Validate": "Metadaten prüfen",
+      "ResetWindowGeometry": "Gespeicherte Fensterpositionen zurücksetzen"
+    },
+    "Accessibility": {
+      "Unreadable": "Text in einer unlesbaren Schrift."
+    },
+    "App": {
+      "Bulk": {
+        "Confirm": "Diese Sprachänderung auf {count} ausgewählte Seiten anwenden?",
+        "ConfirmTitle": "Massenzuweisung der Sprache bestätigen",
+        "Hint": "{count} gewöhnliche Journal-Textseiten prüfen und bearbeiten. Unbekannte Sprachkennungen bleiben erhalten, bis sie ausdrücklich ersetzt werden.",
+        "List": "Journalseiten",
+        "Title": "Illuminated Languages — Massenzuweisung",
+        "DocumentDefaults": "Dokumentvorgaben",
+        "Filters": "Filter",
+        "Search": "Suche",
+        "Folder": "Ordner",
+        "All": "Alle",
+        "Type": "Typ",
+        "JournalPage": "Journalseite",
+        "IdocDocument": "Illuminated Document",
+        "IdocBlock": "Block eines Illuminated Documents",
+        "CurrentLanguage": "Aktuelle Sprache",
+        "State": "Metadatenstatus",
+        "Valid": "Gültig",
+        "Missing": "Fehlend",
+        "Invalid": "Ungültig",
+        "Integration": "Integration",
+        "Ordinary": "Gewöhnliches Journal",
+        "Illuminated": "Illuminated Documents",
+        "Operation": "Vorgang",
+        "Action": "Aktion",
+        "Assign": "Sprache zuweisen",
+        "SelectVisible": "Sichtbare auswählen",
+        "ClearSelection": "Auswahl aufheben",
+        "PreviewCount": "{selected} von {visible} sichtbaren Zielen ausgewählt",
+        "NoneSelected": "Keine Ziele ausgewählt.",
+        "ConfirmationUnavailable": "Der Foundry-Bestätigungsdialog ist nicht verfügbar. Es wurden keine Massenänderungen angewendet.",
+        "SearchPlaceholder": "Dokument, Seite, Block, Ordner, Typ oder Sprache durchsuchen"
+      },
+      "PageLanguage": {
+        "Hint": "{name} eine Schriftsprache zuweisen. Der Quelltext bleibt unverändert.",
+        "Title": "Sprache der Journalseite"
+      },
+      "Settings": {
+        "Hint": "Integrationen, Alphabetisierung, Akteursauflösung, Darstellung, Diagnose und Wartung konfigurieren.",
+        "Open": "Illuminated Languages konfigurieren",
+        "Title": "Illuminated Languages"
+      },
+      "Comparison": {
+        "Actor": "Leseakteur",
+        "Hint": "Vergleich für {page}, geschrieben in {language}.",
+        "Result": "Sprachergebnis",
+        "Title": "Leservergleich",
+        "User": "Benutzer"
+      }
+    },
+    "Badge": {
+      "UnknownScript": "Unbekannte Schrift",
+      "UnreadableWriting": "Unlesbare Schrift",
+      "WrittenIn": "Geschrieben in {language}"
+    },
+    "Controls": {
+      "Automatic": "Automatisch",
+      "BulkAssign": "Massenzuweisung der Sprache",
+      "PageLanguage": "Spracheinstellungen",
+      "ReadAs": "Lesen als…",
+      "ViewOriginal": "Original anzeigen",
+      "CompareReaders": "Leser vergleichen",
+      "NoActor": "Kein Akteur",
+      "PreviewState": "Vorschau als: {actor} — Sprache: {language} — Ergebnis: {result}",
+      "PreviewNoLanguages": "Vorschau ohne Sprachkenntnisse",
+      "PlayerOption": "Spieler: {player} — {actor}",
+      "PreviewPlayerState": "Vorschau als Spieler: {player} — Leseakteur: {actor}",
+      "PreviewNoLanguagesState": "Vorschau ohne jegliche Sprachkenntnisse.",
+      "PreviewActorState": "Vorschau als: {actor}",
+      "UnknownPlayer": "Unbekannter Spieler",
+      "OpenPreview": "Sprachvorschau…",
+      "GmPreviewTitle": "SL-Sprachvorschau",
+      "GmPreviewHint": "Wähle die Perspektive eines Spielers, Akteurs oder ganz ohne Sprachkenntnisse. Diese Vorschau ändert nur deinen Browser.",
+      "GmPreviewDialogHint": "Wähle die Perspektive für alle derzeit geöffneten sprachgeschützten Dokumente. Du erreichst diese Auswahl auch über die deutlich markierte Leiste am oberen Rand eines gerenderten Dokuments.",
+      "PreviewPerspective": "Vorschauperspektive",
+      "ApplyPreview": "Vorschau anwenden",
+      "OriginalState": "Aktuelle Ansicht: ursprünglicher SL-Text.",
+      "ReaderTitle": "Lesecharakter",
+      "ReaderHint": "Wähle den zulässigen Akteur, dessen Sprachkenntnisse für dieses Dokument verwendet werden."
+    },
+    "Diagnostics": {
+      "Compatibility": "Kompatibilitätsstatus",
+      "IdocApi": "API-Version von Illuminated Documents",
+      "IdocInstalled": "Illuminated Documents installiert",
+      "LanguageCount": "Anzahl der Sprachen",
+      "LastError": "Letzter Kompatibilitätsfehler",
+      "PolyglotActive": "Polyglot aktiv",
+      "PolyglotInstalled": "Polyglot installiert",
+      "PolyglotVersion": "Polyglot-Version",
+      "Provider": "Erkannter Sprachanbieter",
+      "Registration": "Registrierung bei Illuminated Documents"
+    },
+    "Errors": {
+      "PolyglotInactive": "Illuminated Languages benötigt ein aktives Polyglot. Geschützter Text bleibt unlesbar.",
+      "PolyglotMissing": "Illuminated Languages benötigt Polyglot 2.8.3 oder neuer. Geschützter Text bleibt unlesbar.",
+      "PolyglotRuntimeUnsupported": "Die aktive Polyglot-Laufzeit stellt die erforderlichen V13-Fähigkeiten nicht bereit. Geschützter Text bleibt unlesbar.",
+      "PolyglotUnsupported": "Diese Polyglot-Version wird vom aktuellen Adapter nicht unterstützt. Unterstützt werden Polyglot 2.8.3 und kompatible 2.8.x-Versionen.",
+      "ProtectedContentUnavailable": "Die geschützte Schrift kann wegen einer nicht verfügbaren Sprachintegration nicht dargestellt werden. Der Originaltext ist verborgen."
+    },
+    "Fields": {
+      "BlockLanguage": "Sprache des Blocks",
+      "BlockLanguageHint": "Diesen Block überschreiben oder die Dokumentsprache erben.",
+      "DocumentLanguage": "Dokumentsprache",
+      "DocumentLanguageHint": "Klartext oder eine Sprache des aktiven Polyglot-Anbieters auswählen.",
+      "Enabled": "Schriftsprachendarstellung aktivieren",
+      "NameVisibility": "Sichtbarkeit des Sprachnamens",
+      "RequireLiteracy": "Schriftkenntnis voraussetzen",
+      "UnreadableFallback": "Ersatzdarstellung für unlesbaren Text"
+    },
+    "Language": {
+      "Inherit": "Dokumentsprache erben",
+      "Plain": "Klartext / allgemein lesbar",
+      "Unknown": "Unbekannte oder fehlende Sprache"
+    },
+    "Sections": {
+      "Appearance": "Darstellung",
+      "Defaults": "Standardwerte",
+      "Integration": "Integration",
+      "Maintenance": "Wartung",
+      "ReadingActor": "Leseakteur",
+      "DocumentCreation": "Sprachvorgaben für neue Dokumente"
+    },
+    "Settings": {
+      "GmOriginalView": "SL verwendet standardmäßig die Originalansicht",
+      "LineHeight": "Zeilenhöhe der unlesbaren Schrift",
+      "RememberSelection": "Letzte »Lesen als«-Auswahl merken",
+      "ScriptScale": "Skalierung der unlesbaren Schrift",
+      "ShowBadge": "Sprachhinweis anzeigen",
+      "SpokenAsLiterate": "Bekannte gesprochene Sprachen als lesbar behandeln, wenn Polyglot keine Schriftkenntnisse bereitstellt",
+      "UseAssigned": "Zugewiesenen Charakter verwenden",
+      "UseControlled": "Genau einen kontrollierten Token verwenden",
+      "UseExplicit": "Explizite »Lesen als«-Auswahl zuerst verwenden",
+      "UseFonts": "Polyglot-Sprachschriften verwenden",
+      "UseOwned": "Genau einen eigenen Spielercharakter verwenden",
+      "MultipleControlled": "Bei mehreren kontrollierten Token",
+      "NoActorBehaviour": "Wenn kein Leseakteur ermittelt wird",
+      "NoActorSilent": "Als unlesbar behandeln, ohne Warnung",
+      "NoActorWarning": "Als unlesbar behandeln und kurze Warnung anzeigen",
+      "RequireExplicit": "Explizite »Lesen als«-Auswahl verlangen",
+      "LanguageLabelMode": "Beschriftung der Sprachauswahl",
+      "LanguageLabelModeHint": "Legt fest, wie Polyglot-Sprachen in Auswahlfeldern angezeigt werden. Gespeichert wird immer die stabile interne Sprach-ID.",
+      "LanguageLabelDisplay": "Anzeigenamen",
+      "LanguageLabelDisplayAndId": "Anzeigenamen und interne IDs",
+      "LanguageLabelId": "Interne IDs",
+      "DocumentCreationHint": "Diese Welteinstellungen befüllen den Abschnitt „Illuminated Languages“ beim Erstellen eines Illuminated Document vor. Sie dienen außerdem als Rückfallvorgaben für neu konfigurierte gewöhnliche Journalseiten. Vorhandene Dokumentmetadaten und ausdrücklich gewählte Welteinstellungen werden nicht überschrieben.",
+      "NameVisibilityDefaultHint": "Für neue Metadaten ist standardmäßig „Nur SL“ eingestellt. Jedes Dokument und jede Journalseite kann diesen Wert überschreiben.",
+      "ResetGeometryHint": "Löscht gespeicherte Größe und Position für Einstellungen, Massenzuweisung, Journal-Seitensprache und Leservergleich."
+    },
+    "Validation": {
+      "InvalidLanguage": "Nicht verfügbare Sprache"
+    },
+    "Visibility": {
+      "Always": "Immer",
+      "GmOnly": "Nur SL",
+      "Hidden": "Verborgen",
+      "Recognized": "Erkannt"
+    },
+    "Results": {
+      "Readable": "Lesbar",
+      "Unreadable": "Unlesbar",
+      "SettingsSaved": "Einstellungen gespeichert.",
+      "GeometryReset": "Gespeicherte Positionen und Größen der Modulfenster wurden zurückgesetzt. Öffne die Fenster erneut, um die Standardwerte zu verwenden."
+    },
+    "Warnings": {
+      "NoReadingActor": "Es konnte kein gültiger Lesecharakter ermittelt werden. Diese Schrift wird als unlesbar behandelt."
+    },
+    "Fallback": {
+      "Generic": "Neutrale allgemeine Glyphen",
+      "Polyglot": "Polyglot-Schrift und -Verschleierung"
+    },
+    "Common": {
+      "Yes": "Ja",
+      "No": "Nein",
+      "NotAvailable": "Nicht verfügbar"
+    }
+  }
+}

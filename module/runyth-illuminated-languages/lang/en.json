@@ -1,0 +1,196 @@
+{
+  "ILLUMINATED_LANGUAGES": {
+    "Actions": {
+      "ApplySelected": "Apply to selected pages",
+      "BulkManager": "Open bulk manager",
+      "ClearCaches": "Clear transient caches",
+      "CopyDiagnostics": "Copy diagnostic report",
+      "Migrate": "Migrate metadata",
+      "Refresh": "Refresh",
+      "Rerender": "Rerender open documents",
+      "Save": "Save",
+      "SelfTest": "Run integration self-test",
+      "Validate": "Validate metadata",
+      "ResetWindowGeometry": "Reset saved window positions"
+    },
+    "Accessibility": {
+      "Unreadable": "Text written in an unreadable script."
+    },
+    "App": {
+      "Bulk": {
+        "Confirm": "Apply this language change to {count} selected pages?",
+        "ConfirmTitle": "Confirm bulk language assignment",
+        "Hint": "Review and update {count} ordinary journal text pages. Unknown language IDs are preserved until explicitly replaced.",
+        "List": "Journal pages",
+        "Title": "Illuminated Languages — Bulk Assignment",
+        "DocumentDefaults": "Document defaults",
+        "Filters": "Filters",
+        "Search": "Search",
+        "Folder": "Folder",
+        "All": "All",
+        "Type": "Type",
+        "JournalPage": "Journal page",
+        "IdocDocument": "Illuminated Document",
+        "IdocBlock": "Illuminated Document block",
+        "CurrentLanguage": "Current language",
+        "State": "Metadata state",
+        "Valid": "Valid",
+        "Missing": "Missing",
+        "Invalid": "Invalid",
+        "Integration": "Integration",
+        "Ordinary": "Ordinary journal",
+        "Illuminated": "Illuminated Documents",
+        "Operation": "Operation",
+        "Action": "Action",
+        "Assign": "Assign language",
+        "SelectVisible": "Select visible",
+        "ClearSelection": "Clear selection",
+        "PreviewCount": "{selected} selected of {visible} visible targets",
+        "NoneSelected": "No targets selected.",
+        "ConfirmationUnavailable": "The Foundry confirmation dialog is unavailable. No bulk changes were applied.",
+        "SearchPlaceholder": "Search document, page, block, folder, type, or language"
+      },
+      "PageLanguage": {
+        "Hint": "Assign a written language to {name}. The source text remains unchanged.",
+        "Title": "Journal Page Language"
+      },
+      "Settings": {
+        "Hint": "Configure integrations, literacy, actor resolution, presentation, diagnostics, and maintenance.",
+        "Open": "Configure Illuminated Languages",
+        "Title": "Illuminated Languages"
+      },
+      "Comparison": {
+        "Actor": "Reading actor",
+        "Hint": "Comparison for {page}, written in {language}.",
+        "Result": "Language result",
+        "Title": "Reader Comparison",
+        "User": "User"
+      }
+    },
+    "Badge": {
+      "UnknownScript": "Unknown script",
+      "UnreadableWriting": "Unreadable writing",
+      "WrittenIn": "Written in {language}"
+    },
+    "Controls": {
+      "Automatic": "Automatic",
+      "BulkAssign": "Bulk language assignment",
+      "PageLanguage": "Language settings",
+      "ReadAs": "Read as…",
+      "ViewOriginal": "View Original",
+      "CompareReaders": "Compare readers",
+      "NoActor": "No actor",
+      "PreviewState": "Previewing as: {actor} — Language: {language} — Result: {result}",
+      "PreviewNoLanguages": "Preview with no language knowledge",
+      "PlayerOption": "Player: {player} — {actor}",
+      "PreviewPlayerState": "Previewing as player: {player} — Reading actor: {actor}",
+      "PreviewNoLanguagesState": "Previewing with no language knowledge.",
+      "PreviewActorState": "Previewing as: {actor}",
+      "UnknownPlayer": "Unknown player",
+      "OpenPreview": "Language Preview…",
+      "GmPreviewTitle": "GM Language Preview",
+      "GmPreviewHint": "Choose a player, actor, or no-language perspective. This preview changes only your browser.",
+      "GmPreviewDialogHint": "Choose the perspective used for every currently open language-enabled document. You can also access this from the clearly marked toolbar at the top of a rendered document.",
+      "PreviewPerspective": "Preview perspective",
+      "ApplyPreview": "Apply preview",
+      "OriginalState": "Current view: Original GM text.",
+      "ReaderTitle": "Reading character",
+      "ReaderHint": "Choose the permitted actor whose language knowledge is used for this document."
+    },
+    "Diagnostics": {
+      "Compatibility": "Compatibility status",
+      "IdocApi": "Illuminated Documents API version",
+      "IdocInstalled": "Illuminated Documents installed",
+      "LanguageCount": "Language count",
+      "LastError": "Last compatibility error",
+      "PolyglotActive": "Polyglot active",
+      "PolyglotInstalled": "Polyglot installed",
+      "PolyglotVersion": "Polyglot version",
+      "Provider": "Detected language provider",
+      "Registration": "Illuminated Documents registration"
+    },
+    "Errors": {
+      "PolyglotInactive": "Illuminated Languages requires Polyglot to be active. Protected text remains unreadable.",
+      "PolyglotMissing": "Illuminated Languages requires Polyglot 2.8.3 or newer. Protected text remains unreadable.",
+      "PolyglotRuntimeUnsupported": "The active Polyglot runtime does not expose the required V13 capabilities. Protected text remains unreadable.",
+      "PolyglotUnsupported": "This Polyglot version is unsupported by the current adapter. Supported runtime versions are Polyglot 2.8.3 through compatible 2.8.x releases.",
+      "ProtectedContentUnavailable": "Protected writing cannot be rendered because the language integration is unavailable. The original text is hidden."
+    },
+    "Fields": {
+      "BlockLanguage": "Block Language",
+      "BlockLanguageHint": "Override this block or inherit the document language.",
+      "DocumentLanguage": "Document Language",
+      "DocumentLanguageHint": "Choose Plain or a language supplied by the active Polyglot provider.",
+      "Enabled": "Enable written-language rendering",
+      "NameVisibility": "Language-name visibility",
+      "RequireLiteracy": "Require written literacy",
+      "UnreadableFallback": "Unreadable fallback"
+    },
+    "Language": {
+      "Inherit": "Inherit document language",
+      "Plain": "Plain / universally readable",
+      "Unknown": "Unknown or missing language"
+    },
+    "Sections": {
+      "Appearance": "Appearance",
+      "Defaults": "Defaults",
+      "Integration": "Integration",
+      "Maintenance": "Maintenance",
+      "ReadingActor": "Reading actor",
+      "DocumentCreation": "New document language defaults"
+    },
+    "Settings": {
+      "GmOriginalView": "GM uses original view by default",
+      "LineHeight": "Unreadable-script line height",
+      "RememberSelection": "Remember last Read as selection",
+      "ScriptScale": "Unreadable-script scale",
+      "ShowBadge": "Show language badge",
+      "SpokenAsLiterate": "Treat known spoken languages as literate when Polyglot has no literacy data",
+      "UseAssigned": "Use assigned character",
+      "UseControlled": "Use exactly one controlled token",
+      "UseExplicit": "Use explicit Read as selection first",
+      "UseFonts": "Use Polyglot language fonts",
+      "UseOwned": "Use exactly one owned player character",
+      "MultipleControlled": "When multiple tokens are controlled",
+      "NoActorBehaviour": "When no reading actor is resolved",
+      "NoActorSilent": "Treat as unreadable without a warning",
+      "NoActorWarning": "Treat as unreadable and show a concise warning",
+      "RequireExplicit": "Require an explicit Read as choice",
+      "LanguageLabelMode": "Language selector labels",
+      "LanguageLabelModeHint": "Controls how Polyglot languages appear in selectors. The stable internal language ID is always stored.",
+      "LanguageLabelDisplay": "Display names",
+      "LanguageLabelDisplayAndId": "Display names and internal IDs",
+      "LanguageLabelId": "Internal IDs",
+      "DocumentCreationHint": "These world settings prefill the Illuminated Languages section when creating an Illuminated Document. They also provide fallback defaults for newly configured ordinary journal pages. Existing document metadata and explicit world choices are not rewritten.",
+      "NameVisibilityDefaultHint": "Defaults to GM only for new metadata. Each document or journal page may override this value.",
+      "ResetGeometryHint": "Clears saved size and position for Settings, Bulk Assignment, Journal Page Language, and Reader Comparison windows."
+    },
+    "Validation": {
+      "InvalidLanguage": "Unavailable language"
+    },
+    "Visibility": {
+      "Always": "Always",
+      "GmOnly": "GM only",
+      "Hidden": "Hidden",
+      "Recognized": "Recognized"
+    },
+    "Results": {
+      "Readable": "Readable",
+      "Unreadable": "Unreadable",
+      "SettingsSaved": "Settings saved.",
+      "GeometryReset": "Saved module window positions and sizes were reset. Reopen windows to use their defaults."
+    },
+    "Warnings": {
+      "NoReadingActor": "No valid reading character could be resolved. This writing is treated as unreadable."
+    },
+    "Fallback": {
+      "Generic": "Neutral generic glyphs",
+      "Polyglot": "Polyglot script and scrambling"
+    },
+    "Common": {
+      "Yes": "Yes",
+      "No": "No",
+      "NotAvailable": "Not available"
+    }
+  }
+}

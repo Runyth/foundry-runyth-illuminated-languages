@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Illuminated Languages</title>
+  <rect width="512" height="512" rx="72" fill="#202830"/>
+  <path d="M96 96h136c43 0 72 24 72 64v256c-14-24-42-40-72-40H96z" fill="#f2e5bd"/>
+  <path d="M416 96H280c-43 0-72 24-72 64v256c14-24 42-40 72-40h136z" fill="#d9c58d"/>
+  <path d="M142 168h104M142 216h88M142 264h104M304 166l42 52-42 52m42-52h-82" fill="none" stroke="#28323d" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,34 @@
+<section class="runyth-illuminated-languages-form">
+  <p class="hint">{{localize "ILLUMINATED_LANGUAGES.App.PageLanguage.Hint" name=pageName}}</p>
+  <div class="form-group">
+    <label for="runyth-illuminated-languages-enabled">{{localize "ILLUMINATED_LANGUAGES.Fields.Enabled"}}</label>
+    <input id="runyth-illuminated-languages-enabled" type="checkbox" name="enabled" {{checked metadata.enabled}}>
+  </div>
+  <div class="form-group">
+    <label for="runyth-illuminated-languages-language">{{localize "ILLUMINATED_LANGUAGES.Fields.DocumentLanguage"}}</label>
+    <select id="runyth-illuminated-languages-language" name="language">
+      {{selectOptions languages selected=metadata.language valueAttr="id" labelAttr="label"}}
+    </select>
+    <p class="hint">{{localize "ILLUMINATED_LANGUAGES.Fields.DocumentLanguageHint"}}</p>
+  </div>
+  <div class="form-group">
+    <label for="runyth-illuminated-languages-literacy">{{localize "ILLUMINATED_LANGUAGES.Fields.RequireLiteracy"}}</label>
+    <input id="runyth-illuminated-languages-literacy" type="checkbox" name="requireLiteracy" {{checked metadata.requireLiteracy}}>
+  </div>
+  <div class="form-group">
+    <label for="runyth-illuminated-languages-visibility">{{localize "ILLUMINATED_LANGUAGES.Fields.NameVisibility"}}</label>
+    <select id="runyth-illuminated-languages-visibility" name="languageNameVisibility">
+      {{selectOptions visibilityOptions selected=metadata.languageNameVisibility valueAttr="id" labelAttr="label"}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="runyth-illuminated-languages-fallback">{{localize "ILLUMINATED_LANGUAGES.Fields.UnreadableFallback"}}</label>
+    <select id="runyth-illuminated-languages-fallback" name="unreadableFallback">
+      {{selectOptions fallbackOptions selected=metadata.unreadableFallback valueAttr="id" labelAttr="label"}}
+    </select>
+  </div>
+  <footer class="form-footer">
+    <button type="submit"><i class="fa-solid fa-floppy-disk"></i> {{localize "ILLUMINATED_LANGUAGES.Actions.Save"}}</button>
+  </footer>
+</section>

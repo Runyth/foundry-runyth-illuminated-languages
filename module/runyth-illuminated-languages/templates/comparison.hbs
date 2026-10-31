@@ -1,0 +1,17 @@
+<section class="runyth-illuminated-languages-comparison">
+  <p>{{localize "ILLUMINATED_LANGUAGES.App.Comparison.Hint" page=pageName language=language}}</p>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">{{localize "ILLUMINATED_LANGUAGES.App.Comparison.User"}}</th>
+        <th scope="col">{{localize "ILLUMINATED_LANGUAGES.App.Comparison.Actor"}}</th>
+        <th scope="col">{{localize "ILLUMINATED_LANGUAGES.App.Comparison.Result"}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr><td>{{userName}}</td><td>{{actorName}}</td><td>{{result}}</td></tr>
+      {{/each}}
+    </tbody>
+  </table>
+</section>

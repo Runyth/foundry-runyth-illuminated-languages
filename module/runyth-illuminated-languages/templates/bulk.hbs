@@ -1,0 +1,87 @@
+<div class="runyth-illuminated-languages-bulk">
+  <p class="hint">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Hint" count=count}}</p>
+
+  <section class="bulk-filters" aria-labelledby="runyth-illuminated-languages-filter-heading">
+    <h2 id="runyth-illuminated-languages-filter-heading">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Filters"}}</h2>
+    <label for="runyth-illuminated-languages-bulk-search">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Search"}}</label>
+    <input id="runyth-illuminated-languages-bulk-search" type="search" name="filterSearch" data-bulk-filter placeholder="{{localize 'ILLUMINATED_LANGUAGES.App.Bulk.SearchPlaceholder'}}">
+    <label for="runyth-illuminated-languages-bulk-folder">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Folder"}}</label>
+    <select id="runyth-illuminated-languages-bulk-folder" name="filterFolder" data-bulk-filter>
+      <option value="">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.All"}}</option>
+      {{#each folders}}<option value="{{this}}">{{this}}</option>{{/each}}
+    </select>
+    <label for="runyth-illuminated-languages-bulk-type">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Type"}}</label>
+    <select id="runyth-illuminated-languages-bulk-type" name="filterType" data-bulk-filter>
+      <option value="">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.All"}}</option>
+      <option value="journal-page">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.JournalPage"}}</option>
+      <option value="idoc-document">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.IdocDocument"}}</option>
+      <option value="idoc-block">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.IdocBlock"}}</option>
+    </select>
+    <label for="runyth-illuminated-languages-bulk-language-filter">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.CurrentLanguage"}}</label>
+    <select id="runyth-illuminated-languages-bulk-language-filter" name="filterLanguage" data-bulk-filter>
+      <option value="">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.All"}}</option>
+      {{selectOptions languages valueAttr="id" labelAttr="label"}}
+    </select>
+    <label for="runyth-illuminated-languages-bulk-state">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.State"}}</label>
+    <select id="runyth-illuminated-languages-bulk-state" name="filterState" data-bulk-filter>
+      <option value="">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.All"}}</option>
+      <option value="valid">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Valid"}}</option>
+      <option value="missing">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Missing"}}</option>
+      <option value="invalid">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Invalid"}}</option>
+    </select>
+    <label for="runyth-illuminated-languages-bulk-integration">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Integration"}}</label>
+    <select id="runyth-illuminated-languages-bulk-integration" name="filterIntegration" data-bulk-filter>
+      <option value="">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.All"}}</option>
+      <option value="ordinary">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Ordinary"}}</option>
+      <option value="illuminated">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Illuminated"}}</option>
+    </select>
+  </section>
+
+  <section class="bulk-controls" aria-labelledby="runyth-illuminated-languages-operation-heading">
+    <h2 id="runyth-illuminated-languages-operation-heading">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Operation"}}</h2>
+    <label for="runyth-illuminated-languages-bulk-operation">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Action"}}</label>
+    <select id="runyth-illuminated-languages-bulk-operation" name="operation">
+      <option value="assign">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.Assign"}}</option>
+      <option value="validate">{{localize "ILLUMINATED_LANGUAGES.Actions.Validate"}}</option>
+    </select>
+    <label for="runyth-illuminated-languages-bulk-assignment">{{localize "ILLUMINATED_LANGUAGES.Fields.DocumentLanguage"}}</label>
+    <select id="runyth-illuminated-languages-bulk-assignment" name="language">{{selectOptions languages valueAttr="id" labelAttr="label"}}</select>
+    <label for="runyth-illuminated-languages-bulk-visibility">{{localize "ILLUMINATED_LANGUAGES.Fields.NameVisibility"}}</label>
+    <select id="runyth-illuminated-languages-bulk-visibility" name="languageNameVisibility">{{selectOptions visibilityOptions valueAttr="id" labelAttr="label"}}</select>
+    <label for="runyth-illuminated-languages-bulk-fallback">{{localize "ILLUMINATED_LANGUAGES.Fields.UnreadableFallback"}}</label>
+    <select id="runyth-illuminated-languages-bulk-fallback" name="unreadableFallback">{{selectOptions fallbackOptions valueAttr="id" labelAttr="label"}}</select>
+    <label class="bulk-checkbox" for="runyth-illuminated-languages-bulk-literacy"><input id="runyth-illuminated-languages-bulk-literacy" type="checkbox" name="requireLiteracy" checked> <span>{{localize "ILLUMINATED_LANGUAGES.Fields.RequireLiteracy"}}</span></label>
+  </section>
+
+  <div class="bulk-selection-actions">
+    <button type="button" data-action="selectVisible">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.SelectVisible"}}</button>
+    <button type="button" data-action="clearSelection">{{localize "ILLUMINATED_LANGUAGES.App.Bulk.ClearSelection"}}</button>
+    <strong data-preview-count aria-live="polite"></strong>
+  </div>
+
+  <div class="bulk-list" role="region" aria-label="{{localize 'ILLUMINATED_LANGUAGES.App.Bulk.List'}}" tabindex="0">
+    {{#each targets}}
+      <label
+        class="bulk-row"
+        data-folder="{{folderName}}"
+        data-type="{{type}}"
+        data-language="{{language}}"
+        data-integration="{{status}}"
+        data-missing="{{missing}}"
+        data-invalid="{{invalid}}"
+      >
+        <input type="checkbox" name="target.{{encodedKey}}">
+        <span><strong>{{documentName}}</strong> — {{targetName}}</span>
+        <span>{{folderName}}</span>
+        <span>{{typeLabel}}</span>
+        <span class="bulk-language-label">{{languageLabel}}</span>
+        {{#if invalid}}<span class="validation-error">{{localize "ILLUMINATED_LANGUAGES.Validation.InvalidLanguage"}}</span>{{/if}}
+      </label>
+    {{/each}}
+  </div>
+  {{#if result}}<pre class="result" aria-live="polite">{{json result}}</pre>{{/if}}
+  <footer class="form-footer">
+    <button type="submit"><i class="fa-solid fa-language" aria-hidden="true"></i> {{localize "ILLUMINATED_LANGUAGES.Actions.ApplySelected"}}</button>
+    <button type="button" data-action="refresh"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> {{localize "ILLUMINATED_LANGUAGES.Actions.Refresh"}}</button>
+  </footer>
+</div>

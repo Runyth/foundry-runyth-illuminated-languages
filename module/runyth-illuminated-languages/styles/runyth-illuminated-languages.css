@@ -1,0 +1,483 @@
+.runyth-illuminated-languages {
+  --il-surface: color-mix(in srgb, var(--color-cool-5, #24303a) 88%, black);
+  --il-surface-alt: color-mix(in srgb, var(--color-cool-4, #354452) 76%, black);
+  --il-text: var(--color-light-1, #f4f4f4);
+  --il-muted: var(--color-light-3, #c9c9c9);
+  --il-border: var(--color-border-light-2, #8b8b8b);
+  --il-danger: #ffb4ab;
+  color: var(--il-text);
+}
+
+.runyth-illuminated-languages section,
+.runyth-illuminated-languages-form,
+.runyth-illuminated-languages-settings,
+.runyth-illuminated-languages-bulk {
+  box-sizing: border-box;
+}
+
+.runyth-illuminated-languages-settings,
+.runyth-illuminated-languages-bulk,
+.runyth-illuminated-languages-form {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  overflow: auto;
+}
+
+.runyth-illuminated-languages-settings > section,
+.runyth-illuminated-languages-bulk > section {
+  padding: 0.75rem;
+  border: 1px solid var(--il-border);
+  border-radius: 0.35rem;
+  background: var(--il-surface);
+}
+
+.runyth-illuminated-languages .form-group,
+.runyth-illuminated-languages-form .form-group {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(10rem, 1fr);
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-block: 0.45rem;
+}
+
+.runyth-illuminated-languages .form-group .hint,
+.runyth-illuminated-languages-form .form-group .hint {
+  grid-column: 1 / -1;
+  color: var(--il-muted);
+  margin: 0;
+}
+
+.runyth-illuminated-languages input,
+.runyth-illuminated-languages select,
+.runyth-illuminated-languages button,
+.runyth-illuminated-languages-form input,
+.runyth-illuminated-languages-form select,
+.runyth-illuminated-languages-form button {
+  min-height: 2rem;
+}
+
+.runyth-illuminated-languages .status-grid {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) minmax(8rem, 1fr);
+  gap: 0.35rem 1rem;
+}
+
+.runyth-illuminated-languages .button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.5rem;
+}
+
+.runyth-illuminated-languages .result {
+  max-height: 12rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  background: var(--il-surface-alt);
+  color: var(--il-text);
+  border: 1px solid var(--il-border);
+  padding: 0.6rem;
+}
+
+.runyth-illuminated-languages-controls,
+.runyth-illuminated-languages-badge,
+.runyth-illuminated-languages-dependency-warning {
+  margin-block: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--color-border-light-2, #777);
+  background: rgba(20, 24, 28, 0.92);
+  color: #fff;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.runyth-illuminated-languages-controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.runyth-illuminated-languages-dependency-warning {
+  border-color: #e0a800;
+  background: #332600;
+  color: #fff4c2;
+}
+
+.runyth-illuminated-languages-unreadable {
+  font-family: var(--illuminated-language-font, inherit);
+  font-size: calc(1em * var(--illuminated-language-scale, 1));
+  line-height: var(--illuminated-language-line-height, 1.25);
+}
+
+.runyth-illuminated-languages .bulk-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.65rem;
+}
+
+.runyth-illuminated-languages .bulk-controls label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.runyth-illuminated-languages .bulk-list {
+  min-height: 18rem;
+  max-height: 34rem;
+  overflow: auto;
+  border: 1px solid var(--il-border);
+}
+
+.runyth-illuminated-languages .bulk-row {
+  display: grid;
+  grid-template-columns: auto minmax(14rem, 2fr) minmax(8rem, 1fr) minmax(8rem, 1fr) auto;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.45rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--il-border) 40%, transparent);
+}
+
+.runyth-illuminated-languages .validation-error {
+  color: var(--il-danger);
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: light) {
+  .runyth-illuminated-languages {
+    --il-surface: #f7f7f7;
+    --il-surface-alt: #e9edf0;
+    --il-text: #171717;
+    --il-muted: #4b4b4b;
+    --il-border: #666;
+    --il-danger: #8a1c14;
+  }
+}
+
+@media (max-width: 640px) {
+  .runyth-illuminated-languages .form-group,
+  .runyth-illuminated-languages-form .form-group,
+  .runyth-illuminated-languages .status-grid,
+  .runyth-illuminated-languages .bulk-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.runyth-illuminated-languages-actor-warning {
+  margin-block: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #b98600;
+  border-radius: 0.3rem;
+  background: #332600;
+  color: #fff4c2;
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9rem;
+}
+
+.runyth-illuminated-languages-preview-state {
+  font-weight: 700;
+}
+
+.runyth-illuminated-languages-comparison {
+  padding: 0.8rem;
+  overflow: auto;
+}
+
+.runyth-illuminated-languages-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.runyth-illuminated-languages-comparison th,
+.runyth-illuminated-languages-comparison td {
+  padding: 0.45rem;
+  border: 1px solid var(--il-border);
+  text-align: left;
+}
+
+.runyth-illuminated-languages .bulk-filters,
+.runyth-illuminated-languages .bulk-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.55rem;
+  padding: 0.65rem;
+  border: 1px solid var(--il-border);
+  border-radius: 0.35rem;
+  background: var(--il-surface);
+}
+
+.runyth-illuminated-languages .bulk-filters h2,
+.runyth-illuminated-languages .bulk-controls h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.runyth-illuminated-languages .bulk-filters label,
+.runyth-illuminated-languages .bulk-controls label {
+  display: grid;
+  align-content: start;
+  gap: 0.25rem;
+}
+
+.runyth-illuminated-languages .bulk-selection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.runyth-illuminated-languages .bulk-selection-actions [data-preview-count] {
+  margin-inline-start: auto;
+}
+
+.runyth-illuminated-languages-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.runyth-illuminated-languages-controls label {
+  flex: 0 1 auto;
+}
+
+.runyth-illuminated-languages-controls select {
+  max-width: min(28rem, 65vw);
+}
+
+.runyth-illuminated-languages-preview-state {
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+
+/* Discoverable viewer controls. Kept inside the rendered document so the same
+   public transformation path works for ordinary journals and Illuminated Documents. */
+.runyth-illuminated-languages-controls {
+  display: grid;
+  gap: 0.35rem;
+  margin-block: 0.55rem 0.85rem;
+  padding: 0.55rem 0.7rem;
+  border-inline-start: 0.25rem solid var(--color-border-highlight, #c9a227);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.runyth-illuminated-languages-controls-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.runyth-illuminated-languages-controls-heading i {
+  width: 1.1rem;
+  text-align: center;
+}
+
+.runyth-illuminated-languages-controls-hint {
+  margin: 0;
+  opacity: 0.82;
+  font-size: 0.82rem;
+}
+
+.runyth-illuminated-languages-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.45rem 0.65rem;
+}
+
+.runyth-illuminated-languages-controls-row label {
+  display: grid;
+  gap: 0.2rem;
+  min-width: min(20rem, 100%);
+}
+
+.runyth-illuminated-languages-controls-label {
+  font-weight: 600;
+}
+
+.runyth-illuminated-languages-controls-row select {
+  min-width: min(20rem, 100%);
+  max-width: min(34rem, 75vw);
+}
+
+.runyth-illuminated-languages-view-original {
+  white-space: nowrap;
+}
+
+.runyth-illuminated-languages-gm-preview[data-preview-mode]:not([data-preview-mode="original"]) {
+  border-inline-start-color: var(--color-level-info, #4aa3df);
+}
+
+.runyth-illuminated-languages-preview-dialog {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.runyth-illuminated-languages-preview-dialog p {
+  margin: 0;
+}
+
+.runyth-illuminated-languages-preview-dialog label {
+  display: grid;
+  gap: 0.3rem;
+}
+
+@media (max-width: 640px) {
+  .runyth-illuminated-languages-controls-row,
+  .runyth-illuminated-languages-controls-row label,
+  .runyth-illuminated-languages-controls-row select {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+/* v1.0.7 UI resilience and localization-safe controls. */
+.runyth-illuminated-languages .window-content,
+.runyth-illuminated-languages .runyth-illuminated-languages-settings,
+.runyth-illuminated-languages .runyth-illuminated-languages-bulk,
+.runyth-illuminated-languages .runyth-illuminated-languages-form,
+.runyth-illuminated-languages .runyth-illuminated-languages-comparison {
+  min-width: 0;
+  min-height: 0;
+}
+
+.runyth-illuminated-languages *,
+.runyth-illuminated-languages-form *,
+.runyth-illuminated-languages-comparison * {
+  box-sizing: border-box;
+}
+
+.runyth-illuminated-languages input:not([type="checkbox"]):not([type="radio"]),
+.runyth-illuminated-languages select,
+.runyth-illuminated-languages textarea,
+.runyth-illuminated-languages-form input:not([type="checkbox"]):not([type="radio"]),
+.runyth-illuminated-languages-form select,
+.runyth-illuminated-languages-form textarea,
+.runyth-illuminated-languages-controls select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.35rem 0.5rem;
+}
+
+.runyth-illuminated-languages button,
+.runyth-illuminated-languages-form button,
+.runyth-illuminated-languages-controls button {
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  padding: 0.4rem 0.65rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+}
+
+.runyth-illuminated-languages .form-footer,
+.runyth-illuminated-languages-form .form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding-block: 0.55rem;
+}
+
+.runyth-illuminated-languages .form-footer > button,
+.runyth-illuminated-languages-form .form-footer > button {
+  flex: 0 1 auto;
+  min-width: min(12rem, 100%);
+}
+
+.runyth-illuminated-languages .checkbox-group input[type="checkbox"],
+.runyth-illuminated-languages .bulk-checkbox input[type="checkbox"],
+.runyth-illuminated-languages-form input[type="checkbox"] {
+  justify-self: end;
+  width: 1.15rem;
+  height: 1.15rem;
+  min-height: 1.15rem;
+}
+
+.runyth-illuminated-languages .status-grid {
+  margin: 0;
+}
+
+.runyth-illuminated-languages .status-grid dt {
+  font-weight: 600;
+}
+
+.runyth-illuminated-languages .status-grid dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.runyth-illuminated-languages .bulk-filters,
+.runyth-illuminated-languages .bulk-controls {
+  grid-template-columns: minmax(8rem, auto) minmax(12rem, 1fr) minmax(8rem, auto) minmax(12rem, 1fr);
+  align-items: center;
+}
+
+.runyth-illuminated-languages .bulk-filters > label,
+.runyth-illuminated-languages .bulk-controls > label:not(.bulk-checkbox) {
+  align-self: center;
+  font-weight: 600;
+}
+
+.runyth-illuminated-languages .bulk-checkbox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.runyth-illuminated-languages .bulk-checkbox input[type="checkbox"] {
+  justify-self: start;
+  flex: 0 0 auto;
+}
+
+.runyth-illuminated-languages .bulk-row {
+  grid-template-columns: auto minmax(14rem, 2fr) minmax(8rem, 1fr) minmax(8rem, 1fr) minmax(10rem, 1fr);
+}
+
+.runyth-illuminated-languages .bulk-row > span,
+.runyth-illuminated-languages .bulk-language-label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.runyth-illuminated-languages .bulk-row .validation-error {
+  grid-column: 2 / -1;
+}
+
+.runyth-illuminated-languages [aria-busy="true"] button,
+.runyth-illuminated-languages[aria-busy="true"] button {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+@media (max-width: 760px) {
+  .runyth-illuminated-languages .bulk-filters,
+  .runyth-illuminated-languages .bulk-controls {
+    grid-template-columns: minmax(7rem, auto) minmax(0, 1fr);
+  }
+
+  .runyth-illuminated-languages .bulk-filters h2,
+  .runyth-illuminated-languages .bulk-controls h2,
+  .runyth-illuminated-languages .bulk-checkbox {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .runyth-illuminated-languages .form-footer > button,
+  .runyth-illuminated-languages-form .form-footer > button,
+  .runyth-illuminated-languages .bulk-selection-actions > button {
+    width: 100%;
+  }
+
+  .runyth-illuminated-languages .bulk-selection-actions [data-preview-count] {
+    width: 100%;
+    margin-inline-start: 0;
+  }
+}
