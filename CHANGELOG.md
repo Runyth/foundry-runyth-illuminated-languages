@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.11 - 2026-11-01
+
+### Fixed
+
+- Attributed the source licence headers to the same holder the README Licence chapter names so every module surface carries the same copyright holder.
+
 ## 1.0.10 — 2026-11-01
 
 - Declared the `AGPL-3.0-or-later` licence and the tested Node `>=22.13.0 <27` range in the lockfile root package.

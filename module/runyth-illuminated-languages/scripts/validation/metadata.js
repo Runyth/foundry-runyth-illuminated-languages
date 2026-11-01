@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { INHERIT_LANGUAGE, METADATA_SCHEMA_VERSION, PLAIN_LANGUAGE } from "../constants.js";
 import { isPlainObject, deepFreeze } from "../utils/object.js";
 

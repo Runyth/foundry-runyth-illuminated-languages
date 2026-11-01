@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
@@ -31,7 +31,7 @@ function flatten(value, prefix = "", output = new Set()) {
 test("manifest identifies release and dependencies", async () => {
   const manifest = JSON.parse(await readFile(path.join(moduleRoot, "module.json"), "utf8"));
   assert.equal(manifest.id, "runyth-illuminated-languages");
-  assert.equal(manifest.version, "1.0.10");
+  assert.equal(manifest.version, "1.0.11");
   assert.equal(manifest.compatibility.minimum, "13");
   assert.equal(manifest.compatibility.maximum, "13");
   assert.equal(manifest.relationships.requires[0].id, "polyglot");

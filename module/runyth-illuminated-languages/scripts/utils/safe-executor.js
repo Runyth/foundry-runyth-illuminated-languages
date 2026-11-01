@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-// Copyright (C) 2026 Runyth. See the LICENSE file for rights and obligations.
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 export class SafeExecutor {
   constructor({ moduleId, throttleMs = 10_000, logger = console, isGm = () => globalThis.game?.user?.isGM === true } = {}) {
     this.moduleId = moduleId ?? "runyth-illuminated-languages";
