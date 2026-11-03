@@ -1,8 +1,6 @@
 # Changelog
 
-## 1.0.11 - 2026-11-01
-
-### Fixed
+## 1.0.11 — 2026-11-01
 
 - Attributed the source licence headers to the same holder the README Licence chapter names so every module surface carries the same copyright holder.
 
